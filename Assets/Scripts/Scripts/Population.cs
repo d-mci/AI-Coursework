@@ -10,6 +10,7 @@ public class Population : MonoBehaviour
     public int popSize = 200;
     public float cutOff = 0.3f;
     public int length;
+    public int goodGene;
     public Transform start;
     public Transform end;
     public GameObject agentPrefab;
@@ -51,7 +52,13 @@ public class Population : MonoBehaviour
             Destroy(pop[i].gameObject);
         }
         pop.Clear();
+        for (int i = 0; i < goodGene; i++)
+        {
+            GameObject go = Instantiate(agentPrefab, start.position, Quaternion.identity);
+            go.GetComponent<Agent>().initAgent(survivors[i].dna,end.position);
+            pop.Add(go.GetComponent<Agent>());
 
+        }
         while (pop.Count < popSize)
         {
             for (int i = 0; i < survivors.Count; i++)
@@ -69,6 +76,7 @@ public class Population : MonoBehaviour
         {
             Destroy(survivors[i].gameObject);
         }
+
         currentGeneration++;
     }
 

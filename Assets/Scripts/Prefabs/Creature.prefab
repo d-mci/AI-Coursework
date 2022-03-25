@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFinished: 0
-  agentSpeed: 20
+  agentSpeed: 52.99
   vectorMult: 2
   rotationSpeed: 90
 --- !u!120 &-4407591873837635491
