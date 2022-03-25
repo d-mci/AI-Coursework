@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Population : MonoBehaviour
 {
@@ -12,7 +13,8 @@ public class Population : MonoBehaviour
     public Transform start;
     public Transform end;
     public GameObject agentPrefab;
-
+    public int currentGeneration;
+    public Text genText;
 
     void initPopulation()
     {
@@ -24,14 +26,17 @@ public class Population : MonoBehaviour
             obj.GetComponent<Agent>().initAgent(new DNA(length), end.position);
             pop.Add(obj.GetComponent<Agent>());
         }
+        currentGeneration = 1;
     }
     private void Start()
     {
         initPopulation();
+
     }
     private void Update()
     {
         if (!HasActive()) { NextGeneration(); }
+        genText.text = "current gen: " + currentGeneration.ToString();
     }
     void NextGeneration()
     {
@@ -64,6 +69,7 @@ public class Population : MonoBehaviour
         {
             Destroy(survivors[i].gameObject);
         }
+        currentGeneration++;
     }
 
     Agent getFittest()
