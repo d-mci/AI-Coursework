@@ -101,6 +101,17 @@ public class Agent : MonoBehaviour
         float zRot = Mathf.Atan2(fromTo.y, fromTo.x) * Mathf.Rad2Deg;
         return Quaternion.Euler(0, 0, zRot + angleOffset);
     }
-void End() { isFinished = true; }
-       
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        /* if it collides with any wall */
+        if (collision.gameObject.layer == 6)
+        {
+            isFinished = true;
+            Debug.Log("hit");
+        }
+    }
+    void End() { isFinished = true; }
+  
 }
+
+

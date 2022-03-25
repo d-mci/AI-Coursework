@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 212073691423246114}
   - component: {fileID: 114436980181281732}
   - component: {fileID: -4407591873837635491}
+  - component: {fileID: -4275385424061631334}
   m_Layer: 0
   m_Name: Creature
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147024504216606}
   m_LocalRotation: {x: -0, y: -0, z: 0.2874983, w: 0.9577812}
-  m_LocalPosition: {x: -26.8333, y: -13.9634, z: 0}
+  m_LocalPosition: {x: -26.8341, y: -13.9639, z: 0}
   m_LocalScale: {x: 0.036610283, y: 0.03899263, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: 0312ed7b0ff834449bc8c8ab639b1fa7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -97,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFinished: 0
-  agentSpeed: 100
+  agentSpeed: 20
   vectorMult: 2
   rotationSpeed: 90
 --- !u!120 &-4407591873837635491
@@ -170,19 +171,19 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.9716981, g: 0.9670338, b: 0.14208792, a: 1}
-      key1: {r: 1, g: 0.32602745, b: 0, a: 1}
-      key2: {r: 0, g: 0, b: 0, a: 0}
-      key3: {r: 0, g: 0, b: 0, a: 0}
-      key4: {r: 0, g: 0, b: 0, a: 0}
+      key0: {r: 1, g: 0, b: 0.40135288, a: 1}
+      key1: {r: 0, g: 0.9764706, b: 0.3157047, a: 1}
+      key2: {r: 0.88798237, g: 1, b: 0, a: 0}
+      key3: {r: 0.88798237, g: 1, b: 0, a: 0}
+      key4: {r: 0, g: 1, b: 0.46529698, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 2699
-      ctime1: 65535
-      ctime2: 0
-      ctime3: 0
-      ctime4: 0
+      ctime0: 19661
+      ctime1: 42405
+      ctime2: 63993
+      ctime3: 63993
+      ctime4: 63993
       ctime5: 0
       ctime6: 0
       ctime7: 0
@@ -195,7 +196,7 @@ LineRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_NumColorKeys: 2
+      m_NumColorKeys: 3
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 0
@@ -205,3 +206,19 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!70 &-4275385424061631334
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147024504216606}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.80008215, y: -0.66025853}
+  m_Size: {x: 2.6001828, y: 2.4413188}
+  m_Direction: 0
